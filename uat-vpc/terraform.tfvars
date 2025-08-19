@@ -1,0 +1,5 @@
+prefix         = "uat"
+environment    = "UAT"
+region         = "ap-southeast-1"
+placeholder    = "placedog.net"
+placeholder_id = "23"
