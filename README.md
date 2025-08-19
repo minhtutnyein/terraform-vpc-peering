@@ -107,7 +107,7 @@ Outputs
 - peering_connection_id
 - peering_connection_status
 - peering_connection_tags
-- peering_details which were include connection_id, status, both vpc_id, etd
+- peering_details which were include connection_id, status, both vpc_id, etc.
 
 ## 🛠 Commands Reference
 - Validate configuration:
