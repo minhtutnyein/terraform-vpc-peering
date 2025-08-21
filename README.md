@@ -8,13 +8,15 @@ The setup is designed to run **entirely on your local machine** using the **defa
 
 ## 📂 Project Structure
 ```bash
-├── dev-vpc                     #dev_vpc/#Root module to create DEV VPC
+├── dev-vpc                 #dev_vpc/#Root module to create DEV VPC
 │   ├── main.tf
 │   ├── outputs.tf
 │   ├── terraform.tfvars
 │   ├── variables.tf
 │   └── versions.tf
-├── hellocloud-app-aws          #hellocloud-app-aws/#Child moudle that provisions a VPC, subnets, Keypair, SGs, EC2, etc.
+├── file                    #EC2 user_data file
+│   └── deploy_app.sh
+├── hellocloud-app-aws      #hellocloud-app-aws/#Child moudle that provisions a VPC, subnets, Keypair, SGs, EC2, etc.
 │   ├── data.tf
 │   ├── instance.tf
 │   ├── keypair.tf
@@ -22,13 +24,13 @@ The setup is designed to run **entirely on your local machine** using the **defa
 │   ├── variables.tf
 │   ├── versions.tf
 │   └── vpc.tf
-├── uat-vpc                     #uat_vpc/#Root module to create UAT VPC
+├── uat-vpc                 #uat_vpc/#Root module to create UAT VPC
 │   ├── main.tf
 │   ├── outputs.tf
 │   ├── terraform.tfvars
 │   ├── variables.tf
 │   └── versions.tf
-└── vpc_peering                 #vpc_peering/#Root module to create VPC Peering between DEV and UAT
+└── vpc_peering             #vpc_peering/#Root module to create VPC Peering between DEV and UAT
     ├── maint.tf
     ├── outputs.tf
     └── versions.tf
