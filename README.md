@@ -140,6 +140,10 @@ terraform state show
 ```bash
 terrafrom destroy
 ```
+- Export private.pem file on local PC for access to EC2 instance
+```bash
+terraform output -raw hellocloud_instance_private_key > dev_private_key.pem chmod 400 dev_private_key.pem
+```
 
 ## 📌 Future Improvements
 
