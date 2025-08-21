@@ -14,7 +14,7 @@ The setup is designed to run **entirely on your local machine** using the **defa
 │   ├── terraform.tfvars
 │   ├── variables.tf
 │   └── versions.tf
-├── file                    #EC2 user_data file
+├── file                    #EC2 user_data file directory
 │   └── deploy_app.sh
 ├── hellocloud-app-aws      #hellocloud-app-aws/#Child moudle that provisions a VPC, subnets, Keypair, SGs, EC2, etc.
 │   ├── data.tf
