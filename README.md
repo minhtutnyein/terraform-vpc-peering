@@ -14,10 +14,10 @@ The setup is designed to run **entirely on your local machine** using the **defa
 │   ├── terraform.tfvars
 │   ├── variables.tf
 │   └── versions.tf
-├── file                    #EC2 user_data file directory
-│   └── deploy_app.sh
-├── hellocloud-app-aws      #hellocloud-app-aws/#Child moudle that provisions a VPC, subnets, Keypair, SGs, EC2, etc.
+├── hellocloud-app-aws
 │   ├── data.tf
+│   ├── files               #EC2 user_data for intall "hellocloud-aws-app" file directory 
+│   │   └── deploy_app.sh
 │   ├── instance.tf
 │   ├── keypair.tf
 │   ├── outputs.tf
@@ -31,7 +31,7 @@ The setup is designed to run **entirely on your local machine** using the **defa
 │   ├── variables.tf
 │   └── versions.tf
 └── vpc_peering             #vpc_peering/#Root module to create VPC Peering between DEV and UAT
-    ├── maint.tf
+    ├── main.tf
     ├── outputs.tf
     └── versions.tf
 ```
