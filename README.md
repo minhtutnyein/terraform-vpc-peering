@@ -14,10 +14,10 @@ The setup is designed to run **entirely on your local machine** using the **defa
 │   ├── terraform.tfvars
 │   ├── variables.tf
 │   └── versions.tf
-├── hellocloud-app-aws
+├── file                    #EC2 user_data file directory 
+│   └── deploy_app.sh
+├── hellocloud-app-aws      #hellocloud-app-aws/#Child moudle that provisions a VPC, subnets, Keypair, SGs, EC2, etc.
 │   ├── data.tf
-│   ├── files               #EC2 user_data for intall "hellocloud-aws-app" file directory 
-│   │   └── deploy_app.sh
 │   ├── instance.tf
 │   ├── keypair.tf
 │   ├── outputs.tf
@@ -151,6 +151,3 @@ If you later migrate to Terraform Cloud or an S3 remote backend, you can:
 - Replace the ```backend "local"``` blocks with ```backend "remote"``` or ```backend "s3"```.
 - Create separate workspaces (```dev_vpc```,```uat_vpc```,```vpc_peering```) in Terraform Cloud for RBAC & collaboration.
 For now, this setup is single-user local only.
-
-
-
